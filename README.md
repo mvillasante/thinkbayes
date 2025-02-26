@@ -1,16 +1,15 @@
 # Basic python project template
-[![codecov](https://codecov.io/gh/IslasGECI/basic_python_project/graph/badge.svg?token=RY807ST1T1)](https://codecov.io/gh/IslasGECI/basic_python_project)
+[![codecov](https://codecov.io/gh/IslasGECI/thinkbayes/graph/badge.svg?token=RY807ST1T1)](https://codecov.io/gh/IslasGECI/thinkbayes)
 ![example branch
-parameter](https://github.com/IslasGECI/basic_python_project/actions/workflows/actions.yml/badge.svg)
-![licencia](https://img.shields.io/github/license/IslasGECI/basic_python_project)
-![languages](https://img.shields.io/github/languages/top/IslasGECI/basic_python_project)
-![commits](https://img.shields.io/github/commit-activity/y/IslasGECI/basic_python_project)
-![PyPI - Version](https://img.shields.io/pypi/v/basic_python_project)
+parameter](https://github.com/IslasGECI/thinkbayes/actions/workflows/actions.yml/badge.svg)
+![licencia](https://img.shields.io/github/license/IslasGECI/thinkbayes)
+![languages](https://img.shields.io/github/languages/top/IslasGECI/thinkbayes)
+![commits](https://img.shields.io/github/commit-activity/y/IslasGECI/thinkbayes)
+![PyPI - Version](https://img.shields.io/pypi/v/thinkbayes)
 
 Para usar este repo como plantilla debemos hacer lo siguiente:
 
 1. Presiona el botón verde que dice _Use this template_
-1. Selecciona como dueño a la organización IslasGECI
 1. Agrega el nombre del nuevo módulo de python
 1. Presiona el botón _Create repository from template_
 1. Reemplaza `basic_python_project` por el nombre del nuevo módulo en:
