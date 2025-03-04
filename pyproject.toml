@@ -10,5 +10,7 @@ description-file = "README.md"
 home-page = "https://github.com/IslasGECI/thinkbayes"
 module = "thinkbayes"
 requires = [
+	"pandas",
+	"pandas-stubs"
 ]
 requires-python=">=3.9"
