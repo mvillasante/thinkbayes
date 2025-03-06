@@ -1,5 +1,7 @@
 from thinkbayes.probability import get_fraction_of_bankers, prob, conditional
+
 import pandas as pd
+import pytest
 
 
 gss = pd.read_csv("tests/data/gss_bayes.csv")
@@ -46,4 +48,4 @@ def test_conditional_probability():
     selected = democrat[liberal]
     assert prob(selected) == 0.5206403320240125
     obtained = conditional(liberal, given=female)
-    assert obtained == 0.27581004111500884
+    assert pytest.approx(obtained, 1e-6) == 0.27581004111500884

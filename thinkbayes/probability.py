@@ -1,5 +1,5 @@
 def conditional(a, given):
-    return prob(a[given])
+    return prob(a & given) / prob(given)
 
 
 def prob(a):
