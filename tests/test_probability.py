@@ -43,3 +43,5 @@ def test_conditional_probability():
     """
     selected = democrat[liberal]
     assert prob(selected) == 0.5206403320240125
+    obtained = prob(liberal, given=female)
+    assert obtained == 0.27581004111500884
