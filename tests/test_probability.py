@@ -1,4 +1,4 @@
-from thinkbayes.probability import get_fraction_of_bankers, prob
+from thinkbayes.probability import get_fraction_of_bankers, prob, conditional
 import pandas as pd
 
 
@@ -21,8 +21,10 @@ polviews_index = 3
 liberal = gss["polviews"] <= polviews_index
 
 
+female = gss["sex"] == 2
+
+
 def test_prob_features():
-    female = gss["sex"] == 2
     assert prob(female) == 0.5378575776019476
 
     assert prob(liberal) == 0.27374721038750255
@@ -43,5 +45,5 @@ def test_conditional_probability():
     """
     selected = democrat[liberal]
     assert prob(selected) == 0.5206403320240125
-    obtained = prob(liberal, given=female)
+    obtained = conditional(liberal, given=female)
     assert obtained == 0.27581004111500884
