@@ -1,4 +1,4 @@
-from thinkbayes.probability import get_fraction_of_bankers, prob, conditional
+from thinkbayes.probability import get_fraction_of_bankers, prob, conditional_probability
 
 import pandas as pd
 import pytest
@@ -47,11 +47,11 @@ def test_conditional_probability():
     """
     selected = democrat[liberal]
     assert prob(selected) == 0.5206403320240125
-    obtained = conditional(liberal, given=female)
+    obtained = conditional_probability(liberal, given=female)
     assert pytest.approx(obtained, 1e-6) == 0.27581004111500884
-    prob_female_respondent_given_liberal_and_Democrat = conditional(
+    prob_female_respondent_given_liberal_and_Democrat = conditional_probability(
         female, given=liberal & democrat
     )
     assert prob_female_respondent_given_liberal_and_Democrat == 0.576085409252669
-    prob_female_liberal_given_banker = conditional(liberal & female, given=banker)
+    prob_female_liberal_given_banker = conditional_probability(liberal & female, given=banker)
     assert prob_female_liberal_given_banker == 0.17307692307692307
