@@ -55,3 +55,12 @@ def test_conditional_probability():
     assert prob_female_respondent_given_liberal_and_Democrat == 0.576085409252669
     prob_female_liberal_given_banker = conditional_probability(liberal & female, given=banker)
     assert prob_female_liberal_given_banker == 0.17307692307692307
+
+
+def test_total_probability():
+    """
+    P(A) = P(B_1 & A) + P(B_2 & A)
+    """
+    male = gss["sex"] == 1
+
+    assert prob(banker) == prob(male & banker) + prob(female & banker)
