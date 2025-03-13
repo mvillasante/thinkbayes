@@ -49,3 +49,7 @@ def test_conditional_probability():
     assert prob(selected) == 0.5206403320240125
     obtained = conditional(liberal, given=female)
     assert pytest.approx(obtained, 1e-6) == 0.27581004111500884
+    prob_female_respondent_given_liberal_and_Democrat = conditional(
+        female, given=liberal & democrat
+    )
+    assert prob_female_respondent_given_liberal_and_Democrat == 0.576085409252669
