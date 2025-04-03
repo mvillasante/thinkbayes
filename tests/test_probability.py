@@ -64,3 +64,8 @@ def test_total_probability():
     male = gss["sex"] == 1
 
     assert prob(banker) == prob(male & banker) + prob(female & banker)
+    using_theorem_2 = prob(male) * conditional_probability(banker, given=male) + prob(
+        female
+    ) * conditional_probability(banker, given=female)
+    print(using_theorem_2)
+    assert pytest.approx(prob(banker), 1e-6) == using_theorem_2
